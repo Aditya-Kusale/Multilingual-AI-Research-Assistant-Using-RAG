@@ -1,0 +1,5 @@
+# Minimal install: everything runs, quality is degraded.
+# Useful for CI, air-gapped demos and unit tests.
+numpy>=1.24
+PyYAML>=6.0
+pytest>=8.0

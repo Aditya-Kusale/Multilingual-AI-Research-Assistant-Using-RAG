@@ -1,0 +1,16 @@
+{"query_id": "q01", "query": "What recall at ten did hybrid retrieval reach overall?", "language": "en", "gold_doc_ids": ["en_evaluation_protocol-52025e14"], "gold_language": "en", "notes": "same-language, exact figure"}
+{"query_id": "q02", "query": "Which languages scored worst in the benchmark and why?", "language": "en", "gold_doc_ids": ["en_evaluation_protocol-52025e14"], "gold_language": "en"}
+{"query_id": "q03", "query": "How many annotated queries per language before tuning?", "language": "en", "gold_doc_ids": ["en_evaluation_protocol-52025e14"], "gold_language": "en"}
+{"query_id": "q04", "query": "पुनर्क्रमण से शुद्धता में कितना सुधार हुआ?", "language": "hi", "gold_doc_ids": ["hi_reranking-6ddd1a82"], "gold_language": "hi"}
+{"query_id": "q05", "query": "क्रॉस-एन्कोडर कितने उम्मीदवारों पर चलाया गया?", "language": "hi", "gold_doc_ids": ["hi_reranking-6ddd1a82"], "gold_language": "hi"}
+{"query_id": "q06", "query": "मूल्यांकन के लिए कौन से मापदंड प्रयोग किए गए?", "language": "hi", "gold_doc_ids": ["en_evaluation_protocol-52025e14"], "gold_language": "en", "notes": "CROSS-LINGUAL: Hindi query, English source"}
+{"query_id": "q07", "query": "किस भाषा में सबसे कम रिकॉल मिला?", "language": "hi", "gold_doc_ids": ["en_evaluation_protocol-52025e14"], "gold_language": "en", "notes": "CROSS-LINGUAL"}
+{"query_id": "q08", "query": "Quel est l'effet du fil d'Ariane sur la précision des citations ?", "language": "fr", "gold_doc_ids": ["fr_decoupage-beb3eead"], "gold_language": "fr"}
+{"query_id": "q09", "query": "Pourquoi les articles sur deux colonnes posent-ils problème ?", "language": "fr", "gold_doc_ids": ["fr_decoupage-beb3eead"], "gold_language": "fr"}
+{"query_id": "q10", "query": "How much did structure-aware chunking improve citation precision?", "language": "en", "gold_doc_ids": ["fr_decoupage-beb3eead"], "gold_language": "fr", "notes": "CROSS-LINGUAL: English query, French source"}
+{"query_id": "q11", "query": "为什么空格切分在中文语料上失效？", "language": "zh", "gold_doc_ids": ["zh_tokenization-5b1ae5b0"], "gold_language": "zh"}
+{"query_id": "q12", "query": "字符二元组方案的召回率是多少？", "language": "zh", "gold_doc_ids": ["zh_tokenization-5b1ae5b0"], "gold_language": "zh"}
+{"query_id": "q13", "query": "Why does BM25 fail on Chinese and Thai text?", "language": "en", "gold_doc_ids": ["zh_tokenization-5b1ae5b0"], "gold_language": "zh", "notes": "CROSS-LINGUAL: English query, Chinese source"}
+{"query_id": "q14", "query": "बाइ-एन्कोडर और क्रॉस-एन्कोडर में क्या अंतर है?", "language": "hi", "gold_doc_ids": ["hi_reranking-6ddd1a82"], "gold_language": "hi"}
+{"query_id": "q15", "query": "What is reciprocal rank fusion used for here?", "language": "en", "gold_doc_ids": ["hi_reranking-6ddd1a82"], "gold_language": "hi", "notes": "CROSS-LINGUAL: English query, Hindi source"}
+{"query_id": "q16", "query": "bge-reranker-v2-m3", "language": "en", "gold_doc_ids": ["hi_reranking-6ddd1a82"], "gold_language": "hi", "notes": "exact-surface-form query; this is the case BM25 saves"}

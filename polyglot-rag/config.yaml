@@ -1,0 +1,46 @@
+# Polyglot configuration.
+# Every value can be overridden by env var: POLYGLOT__SECTION__KEY=value
+# e.g. POLYGLOT__RETRIEVAL__FINAL_K=12
+
+embedding:
+  # One shared multilingual vector space. Alternatives:
+  #   intfloat/multilingual-e5-large  (set the prefixes below)
+  #   sentence-transformers/paraphrase-multilingual-mpnet-base-v2 (lighter)
+  model_name: BAAI/bge-m3
+  device: cpu            # "cuda" if you have a GPU
+  batch_size: 16
+  normalize: true
+  query_prefix: ""       # e5 models need "query: "
+  passage_prefix: ""     # e5 models need "passage: "
+
+reranker:
+  enabled: true
+  model_name: BAAI/bge-reranker-v2-m3
+  device: cpu
+  batch_size: 16
+  candidates: 50         # how many fused hits reach the cross-encoder
+
+chunking:
+  target_tokens: 350
+  overlap_sentences: 1
+  min_tokens: 40
+  prepend_breadcrumb: true
+  attach_abstract: true
+  abstract_chars: 400
+
+retrieval:
+  dense_k: 50
+  sparse_k: 50
+  rrf_k: 60
+  final_k: 8
+  min_rerank_score: null
+
+generation:
+  provider: anthropic    # anthropic | openai | echo (offline, no key needed)
+  model: claude-sonnet-4-6
+  max_tokens: 1200
+  temperature: 0.0
+  answer_language: auto  # "auto" mirrors the question's language
+
+storage:
+  index_dir: ./storage

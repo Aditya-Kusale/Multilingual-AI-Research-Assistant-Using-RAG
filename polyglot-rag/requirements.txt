@@ -1,0 +1,27 @@
+# --- core (required) ---
+numpy>=1.24
+PyYAML>=6.0
+
+# --- retrieval quality (strongly recommended) ---
+# Without these the system runs on an offline hashing encoder and skips
+# reranking: it will work end to end, but retrieval quality will be poor.
+sentence-transformers>=3.0
+faiss-cpu>=1.8
+lingua-language-detector>=2.0
+
+# --- document parsing ---
+pymupdf>=1.24            # PDFs
+beautifulsoup4>=4.12     # HTML
+
+# --- generation (pick at least one) ---
+anthropic>=0.40
+openai>=1.40
+
+# --- interfaces ---
+fastapi>=0.115
+uvicorn[standard]>=0.30
+streamlit>=1.38
+pydantic>=2.8
+
+# --- dev ---
+pytest>=8.0
