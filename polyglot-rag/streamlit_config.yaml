@@ -1,0 +1,22 @@
+# Resource-conscious settings for the hosted four-language sample dashboard.
+# The full CLI pipeline keeps its higher-capacity models in config.yaml.
+embedding:
+  model_name: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+  device: cpu
+  batch_size: 8
+  normalize: true
+
+reranker:
+  enabled: false
+
+retrieval:
+  dense_k: 20
+  sparse_k: 20
+  final_k: 6
+
+generation:
+  provider: echo
+  answer_language: auto
+
+storage:
+  index_dir: ./polyglot-rag/storage

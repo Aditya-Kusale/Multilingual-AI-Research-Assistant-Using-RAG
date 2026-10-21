@@ -1,0 +1,10 @@
+# Local credentials and Python artifacts
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Streamlit-generated demo index (rebuilt automatically on first run)
+polyglot-rag/storage/

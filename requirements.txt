@@ -1,0 +1,6 @@
+# Streamlit Cloud environment for the browser dashboard.
+streamlit>=1.40,<2
+numpy>=1.24,<3
+PyYAML>=6,<7
+sentence-transformers>=3,<6
+lingua-language-detector>=2,<3

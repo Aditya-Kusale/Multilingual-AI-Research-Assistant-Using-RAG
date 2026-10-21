@@ -10,6 +10,17 @@ rather than a single average that hides which languages are broken.
 
 ---
 
+## Live Dashboard
+
+The Streamlit dashboard uses the included four-language sample corpus and
+builds its demo index automatically on first launch. A hosted dashboard link
+will be listed here once deployment is complete.
+
+For generated answers rather than the default extractive demo mode, add
+`ANTHROPIC_API_KEY` or `OPENAI_API_KEY` to the app's Streamlit secrets.
+
+---
+
 ## Architecture
 
 ```
@@ -44,17 +55,21 @@ QUERY
 ## Quickstart
 
 ```bash
-git clone <your-repo> polyglot-rag && cd polyglot-rag
+git clone https://github.com/Aditya-Kusale/Multilingual-AI-Research-Assistant-Using-RAG.git
+cd Multilingual-AI-Research-Assistant-Using-RAG
 python -m venv .venv && source .venv/bin/activate
 
-pip install -r requirements.txt
-pip install -e .
+pip install -r requirements.txt       # Streamlit dashboard dependencies
+pip install -r polyglot-rag/requirements.txt  # Full CLI/API/test dependencies
+pip install -e polyglot-rag
 
-cp .env.example .env          # add ANTHROPIC_API_KEY (or set provider: echo)
-
-polyglot ingest ./demo/corpus
+polyglot ingest ./polyglot-rag/demo/corpus
 polyglot ask "मूल्यांकन के लिए कौन से मापदंड प्रयोग किए गए?"
 ```
+
+To use Claude for CLI answers, set `ANTHROPIC_API_KEY` in your shell before
+running the command. The Streamlit demo works without an API key and uses
+extractive, citation-linked answers by default.
 
 The demo corpus is four short papers — English, Hindi, French and Chinese —
 that cite each other's findings, so cross-lingual retrieval is visible
@@ -68,7 +83,7 @@ polyglot eval ./demo/eval_set.jsonl --k 1     # per-language metrics
 polyglot info                                 # index manifest
 
 uvicorn polyglot.api:app --reload             # HTTP API at :8000/docs
-streamlit run app/streamlit_app.py            # web UI
+streamlit run polyglot-rag/app/streamlit_app.py  # web UI from repository root
 pytest                                        # 20 tests, no downloads needed
 ```
 
