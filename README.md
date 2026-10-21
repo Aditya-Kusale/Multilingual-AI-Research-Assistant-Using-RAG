@@ -12,9 +12,11 @@ rather than a single average that hides which languages are broken.
 
 ## Live Dashboard
 
+**[Open the Polyglot multilingual research dashboard](https://polyglot-multilingual-research-assistant.streamlit.app/)**
+
 The Streamlit dashboard uses the included four-language sample corpus and
-builds its demo index automatically on first launch. A hosted dashboard link
-will be listed here once deployment is complete.
+builds its demo index automatically on first launch. It is hosted on Streamlit
+Community Cloud.
 
 For generated answers rather than the default extractive demo mode, add
 `ANTHROPIC_API_KEY` or `OPENAI_API_KEY` to the app's Streamlit secrets.
