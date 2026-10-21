@@ -256,3 +256,7 @@ Roughly in order of payoff:
 - Ingest is full-rebuild only.
 - The offline fallback encoder has no semantics — it exists so the system runs
   without downloads, not to retrieve well.
+## Key Topics
+`multilingual` · `RAG` · `information retrieval` · `cross-lingual search` · `NLP` · `BM25` · `FAISS` · `citation-grounded generation`
+## License
+Distributed under the [MIT License](LICENSE).
